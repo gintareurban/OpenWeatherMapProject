@@ -37,6 +37,8 @@ This will get a copy of the project installed locally.
 
 ### Using
 
+Tests require an active account and login credentials for openweathermap.org. Once the project is cloned, please open file src/test/java/resources/testData/login.properties using any text editor and override "email" and "password" with your login credentials.
+
 
 Run below comand to run the test suite, which will execute all tests and open the test report on completion:
 ```
