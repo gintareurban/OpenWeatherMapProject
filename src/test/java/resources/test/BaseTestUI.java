@@ -34,7 +34,7 @@ public class BaseTestUI extends AbstractTest {
 
     protected static void login() {
         header.clickLinkSignIn();
-        Properties prop = FileReaderUtils.readPropertiesFile("src/test/java/resources/testData/local_login.properties");
+        Properties prop = FileReaderUtils.readPropertiesFile("src/test/java/resources/testData/login.properties");
         login.enterUsernamePasswordAndLogin(prop.getProperty("email"), prop.getProperty("password"));
     }
 }
