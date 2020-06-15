@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources.models.CityData>
+    <City>
+        <id>111111</id>
+        <category>invalidCityId</category>
+    </City>
+    <City>
+        <id></id>
+        <category>emptyCityId</category>
+    </City>
+    <City>
+        <id>null</id>
+        <category>nullCityId</category>
+    </City>
+
+</resources.models.CityData>

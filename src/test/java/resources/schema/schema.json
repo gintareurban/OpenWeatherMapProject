@@ -1,0 +1,454 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "required": [
+    "coord",
+    "weather",
+    "base",
+    "main",
+    "wind",
+    "clouds",
+    "dt",
+    "sys",
+    "timezone",
+    "id",
+    "name",
+    "cod"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "coord": {
+      "$id": "#/properties/coord",
+      "type": "object",
+      "title": "The coord schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "lon": 9.18,
+          "lat": 48.78
+        }
+      ],
+      "required": [
+        "lon",
+        "lat"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "lon": {
+          "$id": "#/properties/coord/properties/lon",
+          "type": "number",
+          "title": "The lon schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0.0,
+          "examples": [
+            9.18
+          ]
+        },
+        "lat": {
+          "$id": "#/properties/coord/properties/lat",
+          "type": "number",
+          "title": "The lat schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0.0,
+          "examples": [
+            48.78
+          ]
+        }
+      }
+    },
+    "weather": {
+      "$id": "#/properties/weather",
+      "type": "array",
+      "title": "The weather schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        [
+          {
+            "id": 801,
+            "main": "Clouds",
+            "description": "few clouds",
+            "icon": "02d"
+          }
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "anyOf": [
+          {
+            "$id": "#/properties/weather/items/anyOf/0",
+            "type": "object",
+            "title": "The first anyOf schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "id": 801,
+                "main": "Clouds",
+                "description": "few clouds",
+                "icon": "02d"
+              }
+            ],
+            "required": [
+              "id",
+              "main",
+              "description",
+              "icon"
+            ],
+            "additionalProperties": true,
+            "properties": {
+              "id": {
+                "$id": "#/properties/weather/items/anyOf/0/properties/id",
+                "type": "integer",
+                "title": "The id schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": 0,
+                "examples": [
+                  801
+                ]
+              },
+              "main": {
+                "$id": "#/properties/weather/items/anyOf/0/properties/main",
+                "type": "string",
+                "title": "The main schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "Clouds"
+                ]
+              },
+              "description": {
+                "$id": "#/properties/weather/items/anyOf/0/properties/description",
+                "type": "string",
+                "title": "The description schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "few clouds"
+                ]
+              },
+              "icon": {
+                "$id": "#/properties/weather/items/anyOf/0/properties/icon",
+                "type": "string",
+                "title": "The icon schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "02d"
+                ]
+              }
+            }
+          }
+        ],
+        "$id": "#/properties/weather/items"
+      }
+    },
+    "base": {
+      "$id": "#/properties/base",
+      "type": "string",
+      "title": "The base schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "stations"
+      ]
+    },
+    "main": {
+      "$id": "#/properties/main",
+      "type": "object",
+      "title": "The main schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "temp": 290.03,
+          "feels_like": 288.52,
+          "temp_min": 288.15,
+          "temp_max": 291.15,
+          "pressure": 1009,
+          "humidity": 68
+        }
+      ],
+      "required": [
+        "temp",
+        "feels_like",
+        "temp_min",
+        "temp_max",
+        "pressure",
+        "humidity"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "temp": {
+          "$id": "#/properties/main/properties/temp",
+          "type": "number",
+          "title": "The temp schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0.0,
+          "examples": [
+            290.03
+          ]
+        },
+        "feels_like": {
+          "$id": "#/properties/main/properties/feels_like",
+          "type": "number",
+          "title": "The feels_like schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0.0,
+          "examples": [
+            288.52
+          ]
+        },
+        "temp_min": {
+          "$id": "#/properties/main/properties/temp_min",
+          "type": "number",
+          "title": "The temp_min schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0.0,
+          "examples": [
+            288.15
+          ]
+        },
+        "temp_max": {
+          "$id": "#/properties/main/properties/temp_max",
+          "type": "number",
+          "title": "The temp_max schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0.0,
+          "examples": [
+            291.15
+          ]
+        },
+        "pressure": {
+          "$id": "#/properties/main/properties/pressure",
+          "type": "integer",
+          "title": "The pressure schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            1009
+          ]
+        },
+        "humidity": {
+          "$id": "#/properties/main/properties/humidity",
+          "type": "integer",
+          "title": "The humidity schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            68
+          ]
+        }
+      }
+    },
+    "visibility": {
+      "$id": "#/properties/visibility",
+      "type": "integer",
+      "title": "The visibility schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        10000
+      ]
+    },
+    "wind": {
+      "$id": "#/properties/wind",
+      "type": "object",
+      "title": "The wind schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "speed": 2.6,
+          "deg": 20
+        }
+      ],
+      "required": [
+        "speed",
+        "deg"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "speed": {
+          "$id": "#/properties/wind/properties/speed",
+          "type": "number",
+          "title": "The speed schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0.0,
+          "examples": [
+            2.6
+          ]
+        },
+        "deg": {
+          "$id": "#/properties/wind/properties/deg",
+          "type": "integer",
+          "title": "The deg schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            20
+          ]
+        }
+      }
+    },
+    "clouds": {
+      "$id": "#/properties/clouds",
+      "type": "object",
+      "title": "The clouds schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "all": 20
+        }
+      ],
+      "required": [
+        "all"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "all": {
+          "$id": "#/properties/clouds/properties/all",
+          "type": "integer",
+          "title": "The all schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            20
+          ]
+        }
+      }
+    },
+    "dt": {
+      "$id": "#/properties/dt",
+      "type": "integer",
+      "title": "The dt schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        1591885338
+      ]
+    },
+    "sys": {
+      "$id": "#/properties/sys",
+      "type": "object",
+      "title": "The sys schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "type": 1,
+          "id": 1274,
+          "country": "DE",
+          "sunrise": 1591845608,
+          "sunset": 1591903563
+        }
+      ],
+      "required": [
+        "type",
+        "id",
+        "country",
+        "sunrise",
+        "sunset"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "type": {
+          "$id": "#/properties/sys/properties/type",
+          "type": "integer",
+          "title": "The type schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        },
+        "id": {
+          "$id": "#/properties/sys/properties/id",
+          "type": "integer",
+          "title": "The id schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            1274
+          ]
+        },
+        "country": {
+          "$id": "#/properties/sys/properties/country",
+          "type": "string",
+          "title": "The country schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "DE"
+          ]
+        },
+        "sunrise": {
+          "$id": "#/properties/sys/properties/sunrise",
+          "type": "integer",
+          "title": "The sunrise schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            1591845608
+          ]
+        },
+        "sunset": {
+          "$id": "#/properties/sys/properties/sunset",
+          "type": "integer",
+          "title": "The sunset schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            1591903563
+          ]
+        }
+      }
+    },
+    "timezone": {
+      "$id": "#/properties/timezone",
+      "type": "integer",
+      "title": "The timezone schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        7200
+      ]
+    },
+    "id": {
+      "$id": "#/properties/id",
+      "type": "integer",
+      "title": "The id schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        2825297
+      ]
+    },
+    "name": {
+      "$id": "#/properties/name",
+      "type": "string",
+      "title": "The name schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "Stuttgart"
+      ]
+    },
+    "cod": {
+      "$id": "#/properties/cod",
+      "type": "integer",
+      "title": "The cod schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        200
+      ]
+    }
+  }
+}

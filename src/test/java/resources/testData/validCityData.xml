@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources.models.CityData>
+    <City>
+        <id>6930414</id>
+        <name>Stuttgart-Ost</name>
+        <countryCode>DE</countryCode>
+        <zipCode>70188</zipCode>
+        <longitude>9.21</longitude>
+        <latitude>48.78</latitude>
+    </City>
+    <City>
+        <id>6619279</id>
+        <name>Sydney</name>
+        <countryCode>AU</countryCode>
+        <zipCode>1027</zipCode>
+        <longitude>151.21</longitude>
+        <latitude>-33.87</latitude>
+    </City>
+    <City>
+        <id>5211303</id>
+        <name>Scranton</name>
+        <countryCode>US</countryCode>
+        <zipCode>18502</zipCode>
+        <longitude>-75.66</longitude>
+        <latitude>41.41</latitude>
+    </City>
+
+</resources.models.CityData>

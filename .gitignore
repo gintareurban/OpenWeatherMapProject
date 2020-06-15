@@ -1,0 +1,10 @@
+.DS_Store
+**/bin/
+**/target/
+**/*.log
+**/.settings/
+/.metadata/
+**/test-output/
+.idea
+**/temp/
+**/local_login.properties
