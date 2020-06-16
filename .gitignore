@@ -6,5 +6,6 @@
 /.metadata/
 **/test-output/
 .idea
-**/temp/
+temp/*
+!temp/.gitkeep
 **/local_login.properties
